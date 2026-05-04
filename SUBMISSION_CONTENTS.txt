@@ -1,0 +1,20 @@
+Submission package contents
+===========================
+
+This is the CourseSite-size code and data package. It keeps the files needed to inspect and reproduce the final project while staying under the 50 MB upload limit.
+
+Included:
+- README.md with run commands and expected outputs
+- requirements_freeze.txt with exact package versions
+- all Python scripts, including multi-GPU and consistency-check scripts
+- pattern_res/ dataset used by the project
+- ckpt/best_fused_params.pt main checkpoint only
+- report_results/ curated metrics, logs, plots, and Nsight Systems files
+- submit_out/ prediction/submission outputs
+
+Excluded to reduce size:
+- duplicate CPU/CUDA checkpoint copies
+- eval_out/ duplicate evaluation outputs already represented in report_results/
+- original CICIEC_HuaDa_Empyrean_Capacitance_Dataset.zip folder
+- requirements.txt, because requirements_freeze.txt is more exact
+- cache files and temporary smoke-test outputs

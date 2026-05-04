@@ -1,0 +1,12 @@
+# Exact package versions used for the final ECE HPC experiments.
+# Python: 3.11.14
+# PyTorch CUDA runtime: 12.1
+# NVIDIA driver CUDA support reported by nvidia-smi: 12.8
+# GPU: 2 x NVIDIA GeForce RTX 2080 Ti
+
+torch==2.5.1
+torchvision==0.20.1
+numpy==2.4.2
+pandas==2.3.3
+matplotlib==3.10.8
+pillow==12.1.0

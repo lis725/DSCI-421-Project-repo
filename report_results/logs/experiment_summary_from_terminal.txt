@@ -1,0 +1,31 @@
+Training comparison:
+CPU training: 173.37s, best_val=0.000871
+Single GPU training: 22.01s, best_val=0.001385
+Dual GPU training: 8.90s, best_val=0.010144
+
+Training speedup:
+Single GPU vs CPU: 7.88x
+Dual GPU vs CPU: 19.48x
+Dual GPU vs single GPU: 2.47x
+
+Inference benchmark:
+CPU FP32: time=606.4667s, throughput=47.49 samples/s
+GPU FP32: time=26.6587s, throughput=1080.32 samples/s
+GPU AMP: time=22.9371s, throughput=1255.61 samples/s
+Dual GPU FP32: time=26.1736s, throughput=1100.34 samples/s
+
+Inference speedup:
+GPU FP32 vs CPU FP32: 22.75x
+GPU AMP vs CPU FP32: 26.44x
+Dual GPU FP32 vs CPU FP32: 23.17x
+Dual GPU FP32 vs single GPU FP32: 1.02x
+
+Optimization study:
+baseline_on_the_fly: time=11.24s, speedup=1.00x, best_val=0.000414
+optimized_cached_memory: time=5.28s, speedup=2.13x, best_val=0.000445
+optimized_cached_memory_amp: time=6.39s, speedup=1.76x, best_val=0.000396
+
+Ablation study:
+params_only: time=2.80s, best_val=0.000057, mae_t1=0.004593, mae_t2=0.006661, mae_t3=0.005727
+raster_only: time=5.38s, best_val=0.000649, mae_t1=0.012193, mae_t2=0.033668, mae_t3=0.018426
+raster_plus_params: time=5.22s, best_val=0.000699, mae_t1=0.017062, mae_t2=0.025464, mae_t3=0.025385
